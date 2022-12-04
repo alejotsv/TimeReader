@@ -39,7 +39,7 @@ public class TimeReader extends JFrame {
                 text= buffer.readLine();
                 if(text.contains("US/Eastern Time")){
                     int index = text.indexOf("<td align=right width=\"15%\">") + 30;
-                    System.out.println(text.substring(index, index +8));
+                    time = "The time is " + text.substring(index, index + 8);
                 }
             } while(buffer.readLine() != null);
 
